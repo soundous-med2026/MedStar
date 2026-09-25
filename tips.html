@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🩺 MedStart | النصائح الصحية</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo.png">
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>💡 النصائح الصحية</h1>
+
+<p>
+حافظ على صحتك باتباع هذه النصائح اليومية.
+</p>
+
+<div class="services">
+
+<div class="service-box">
+<div class="service-icon">🥗</div>
+<h3>التغذية</h3>
+<p>تناول الخضروات والفواكه يوميًا.</p>
+</div>
+
+<div class="service-box">
+<div class="service-icon">💧</div>
+<h3>شرب الماء</h3>
+<p>اشرب من 6 إلى 8 أكواب ماء يوميًا.</p>
+</div>
+
+<div class="service-box">
+<div class="service-icon">🏃</div>
+<h3>الرياضة</h3>
+<p>مارس الرياضة لمدة 30 دقيقة يوميًا.</p>
+</div>
+
+<div class="service-box">
+<div class="service-icon">😴</div>
+<h3>النوم</h3>
+<p>نم من 7 إلى 9 ساعات كل ليلة.</p>
+</div>
+
+<div class="service-box">
+<div class="service-icon">🧠</div>
+<h3>الصحة النفسية</h3>
+<p>خصص وقتًا للراحة وتقليل التوتر.</p>
+</div>
+
+<div class="service-box">
+<div class="service-icon">🚭</div>
+<h3>تجنب التدخين</h3>
+<p>الابتعاد عن التدخين يحافظ على القلب والرئتين.</p>
+</div>
+
+</div>
+
+<br>
+
+<button onclick="randomTip()">
+🎲 نصيحة عشوائية
+</button>
+
+<div id="tipResult"
+class="warning-box"
+style="display:none;margin-top:25px;">
+</div>
+
+<br>
+
+<a href="index.html">
+
+<button>
+
+⬅ العودة للرئيسية
+
+</button>
+
+</a>
+
+</div>
+
+<script>
+
+const tips=[
+
+"🥗 تناول غذاءً متوازنًا كل يوم.",
+
+"💧 اشرب كمية كافية من الماء.",
+
+"🏃 مارس الرياضة بانتظام.",
+
+"😴 احصل على نوم كافٍ.",
+
+"🍎 أكثر من الفواكه والخضروات.",
+
+"🚭 ابتعد عن التدخين.",
+
+"🧘 خصص وقتًا للاسترخاء."
+
+];
+
+function randomTip(){
+
+const box=document.getElementById("tipResult");
+
+box.style.display="block";
+
+box.innerHTML=
+
+"<h2>💡 نصيحة اليوم</h2><p>"+tips[Math.floor(Math.random()*tips.length)]+"</p>";
+
+}
+
+</script>
+
+</body>
+
+</html>
